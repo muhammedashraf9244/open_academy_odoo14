@@ -1,0 +1,20 @@
+<odoo>
+
+        <record model="openacademy.course" id="pythonCourse">
+            <field name="name">Python Course</field>
+            <field name="description">Python is programming language support web apps, mobile app, erp apps using odoe
+            </field>
+        </record>
+        <record model="openacademy.course" id="courseHtml">
+            <field name="name">Course Html</field>
+        </record>
+        <record model="openacademy.course" id="courseCss">
+            <field name="name">Course Css</field>
+            <field name="description">Course CSS description</field>
+        </record>
+        <record model="openacademy.course" id="courseJavascript">
+                <field name="name">Course Javascript</field>
+                <field name="description">Course Javascript description</field>
+        </record>
+
+</odoo>

@@ -1,0 +1,70 @@
+<odoo>
+    <data>
+
+        <!--Search View-->
+        <record model="ir.ui.view" id="session_search_view">
+            <field name="name">session.search</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="duration"/>
+                    <field name="seats"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Tree View-->
+        <record model="ir.ui.view" id="session_tree_view">
+            <field name="name">session.tree</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="duration"/>
+                    <field name="seats"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--Session Form View -->
+        <record model="ir.ui.view" id="session_form_view">
+            <field name="name">session.form</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <form string="Session Form">
+                    <sheet>
+                        <group>
+                             <group string="General">
+                                <field name="course_id"
+                                       create="True" />
+                                <field name="name"/>
+                                <field name="instructor_id" />
+                            </group>
+                            <group string="Schedule">
+                                <field name="start_date"/>
+                                <field name="duration"/>
+                                <field name="seats"/>
+                            </group>
+                        </group>
+                        <label for="attendee_ids"/>
+                        <field name="attendee_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Session Action -->
+        <record model="ir.actions.act_window" id="session_list_action">
+            <field name="name">Sessions</field>
+            <field name="res_model">openacademy.session</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+        <menuitem id="session_menu" name="Sessions"
+                  parent="openacademy_menu"
+                  action="session_list_action"/>
+    </data>
+</odoo>
