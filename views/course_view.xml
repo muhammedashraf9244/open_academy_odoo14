@@ -21,7 +21,8 @@
                 <tree string="Course Form">
                     <field name="name"/>
                     <field name="description"/>
-                    <field name="responsible_id"/>
+                    <field name="responsible_id" options="{'no_create_edit': True,
+                    'quick_create'}"/>
                 </tree>
             </field>
         </record>
